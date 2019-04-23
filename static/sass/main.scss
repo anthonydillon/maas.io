@@ -35,11 +35,31 @@
 @include maas-p-contact-modal;
 @include vf-p-strip-slanted;
 
-h1,
-.p-heading--one,
-h2,
-.p-heading--two {
-  font-weight: 100;
+p,
+h5,
+h6 {
+  &.u-min-margin--bottom {
+    margin-bottom: $spv-nudge-compensation;
+  }
+}
+
+.p-heading-icon-block {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.p-heading-icon-block__copy-block {
+  margin-top: -.5rem;
+}
+
+.p-heading-icon-block__icon {
+  height: auto;
+  margin-bottom: $spv-intra;
+  margin-right: $sph-intra;
+  padding-right: $sph-intra;
+  width: map-get($icon-sizes, heading-icon--x-small);
 }
 
 .p-icon--default {
