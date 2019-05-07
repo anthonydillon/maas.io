@@ -1,25 +1,14 @@
 // settings
-@import
-'settings_colors',
-'settings_grid';
+@import "settings_colors", "settings_grid";
 
 // import vanilla-brochure-theme
-@import 'vanilla-framework/scss/build';
+@import "vanilla-framework/scss/build";
 
 // patterns
-@import
-'patterns_footer',
-'patterns_strips',
-'patterns_heading-icon',
-'patterns_hero-video',
-'patterns_lists',
-'patterns_modal',
-'patterns_navigation',
-'patterns_takeunders',
-'patterns_inline-images',
-'patterns_fluid-grid',
-'patterns_tables',
-'patterns_contact-modal';
+@import "patterns_footer", "patterns_strips", "patterns_heading-icon",
+  "patterns_hero-video", "patterns_lists", "patterns_modal",
+  "patterns_navigation", "patterns_takeunders", "patterns_inline-images",
+  "patterns_fluid-grid", "patterns_tables", "patterns_contact-modal";
 
 // patterns
 @include maas-p-footer;
@@ -51,15 +40,17 @@ h6 {
 }
 
 .p-heading-icon-block__copy-block {
-  margin-top: -.5rem;
+  margin-top: -0.5rem;
 }
 
 .p-heading-icon-block__icon {
+  border-radius: 0;
+  border-right: 1px solid $color-mid-light;
   height: auto;
   margin-bottom: $spv-intra;
   margin-right: $sph-intra;
   padding-right: $sph-intra;
-  width: map-get($icon-sizes, heading-icon--x-small);
+  width: ($sp-unit * 5) + $sph-intra;
 }
 
 .p-icon--default {
@@ -69,7 +60,8 @@ h6 {
 }
 
 @media only screen and (max-width: $breakpoint-medium) {
-  .usabilla_live_button_container { // sass-lint:disable-line class-name-format
+  .usabilla_live_button_container {
+    // sass-lint:disable-line class-name-format
     left: calc(90% - 30px);
   }
 }
@@ -91,7 +83,7 @@ p + p:not(.p-muted-heading) {
 
 // XXX Caleb: Vanilla bug, cuts off border from second strip onwards
 // Issue: https://github.com/vanilla-framework/vanilla-framework/issues/2045
-[class^='p-strip'].is-bordered {
+[class^="p-strip"].is-bordered {
   margin-bottom: inherit;
 }
 
