@@ -46,12 +46,18 @@ h6 {
 
 .p-heading-icon-block__icon {
   border-radius: 0;
-  border-right: 1px solid $color-mid-light;
   height: auto;
   margin-bottom: $spv-intra;
   margin-right: $sph-intra;
   padding-right: $sph-intra;
   width: ($sp-unit * 5) + $sph-intra;
+}
+
+.u-indent {
+  @media only screen and (min-width: $breakpoint-medium) {
+    float: right;
+    width: calc(100% - 4.5rem);
+  }
 }
 
 .p-icon--default {
